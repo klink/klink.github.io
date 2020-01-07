@@ -22,3 +22,12 @@ h1 {
   font-family: 'Cutive Mono', monospace;
   font-size: 30px; 
 }
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
