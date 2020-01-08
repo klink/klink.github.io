@@ -1,10 +1,10 @@
-#welcome-section {
+#welcome {
   height: 100vh;
 
 }
 
 @media (max-width:815px) {
-  #welcome-section: height 500vh;
+  #welcome: height 500vh;
 }
 
 #navbar {
@@ -14,16 +14,17 @@
     float: left;
      color: #f2f2f2;
      text-align: center;
-     padding: 14px 16px;
-     font-size: 17px;
-     color: #353535;
+     padding: 14px 40px;
+     font-size: 14px;
+     color: #656565;
      text-decoration:none;
 
 }
 
 #navbar a {
-color: #353535;
+color: #656565;
 text-decoration:none;
+padding: 20px;
 }
 
 #navbar a:hover {
@@ -31,9 +32,56 @@ color: #353535;
 text-decoration:none;
 }
 
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-#main-image {
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacts {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+#contacts a {
+color: #656565;
+text-decoration:none;
+}
+
+#contacts a:hover {
+color: #353535;
+text-decoration:none;
+}
+
+
+.main-image {
     width: 500px;
+}
+
+.projects-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     align-items: center;
+     justify-items: center;
+}
+
+.project-image {
+    width: 400px;
+    height: auto;
+}
+
+.profile-link {
+    padding: 30px;
 }
 
 body {
