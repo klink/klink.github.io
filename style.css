@@ -119,6 +119,7 @@ h3 {
 header {
     position: fixed;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     padding: 1em;
     z-index: 1000;
@@ -131,15 +132,8 @@ header {
 
 }
 
-.logo {
-    display:flex;
-}
-
-.logo > img {
-    max-width: 50px;
-}
-
 .nav {
+
      align-self:center;
 }
 
