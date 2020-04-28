@@ -55,6 +55,11 @@ strong {
     font-weight: var(--fw-bold);
     display: block;
 }
+@media (min-width: 850px) {
+    strong {
+    display: inline;
+    }
+}
 
 h1 {
   font-family: var(--ff-secondary);
@@ -108,6 +113,7 @@ h3 {
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
+    border-radius: 2em;
 }
 
 .btn:hover {
@@ -119,8 +125,8 @@ h3 {
 header {
     position: fixed;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     padding: 1em;
     z-index: 1000;
     align-self:center;
@@ -160,6 +166,12 @@ header {
     color: var(--clr-accent);
 }
 
+@media (min-width: 650px) {
+    header {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
 
 /*  Intro section  */
 
@@ -169,6 +181,7 @@ header {
 text-align: center;
 display:flex; 
 flex-direction: column;
+max-width: 90%;
 }
 
 .main-image {
@@ -179,11 +192,10 @@ flex-direction: column;
 
 .section-subtitle-intro {
     display: inline-block;
-    width: 50%;
 
 }
 
-@media (min-width: 650px) {
+@media (min-width: 750px) {
 .intro {
  flex-direction: row-reverse;
  justify-content: center;
@@ -197,8 +209,11 @@ h1 {
     margin: 0 2em;
 }
 .section-subtitle-intro {
-    width: 100%;
-
+    text-align: left;
+}
+.intro-text {
+    max-width: 600px;
+    text-align: left;
 }
 
 }
@@ -207,60 +222,60 @@ h1 {
         max-width: 400px;
 }
 }
-/*  My services  */
+/*  My prerequisites  */
 
-.my-services {
+.my-prerequisites {
     background-color: var(--clr-light-2);
     color: var(--clr-dark);
     text-align: center;
 }
 
-.services {
+.prerequisites {
     margin-bottom: 4em;
 }
-.service {
+.prerequisite {
     max-width: 500px;
     margin: 0 1em;
 }
 
 @media (min-width: 650px) {
-    .services {
+    .prerequisites {
         display: flex;
         justify-content: center;
     }
-    .service {
+    .prerequisite {
         max-width: 300px;
     }
 
 }
 
-/*  About me  */
+/*  Why FAC */
 
-.about-me {
+.about {
     max-width: 90%;
     margin: 0 auto;
     text-align: center;
 }
 
-.about-me-img {
+.about-img {
     box-shadow: var(--bs);
     max-width: 70%;
     margin: 0 auto 1em auto;
     opacity: 0.9;
 }
 
-@media (min-width: 700px) {
-    .about-me-grid {
+@media (min-width: 800px) {
+    .about-grid {
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
         align-items: flex-start;
     }
-    .about-me-img {
+    .about-img {
         max-width: 400px;
     margin: 0 2em;
     }
-    .about-me-text {
+    .about-text {
         max-width: 500px; 
         text-align: left;
     }
@@ -305,7 +320,7 @@ color: var(--clr-dark);
 opacity: 0;
 transition: opacity ease-out 250ms;
 pointer-events: none;
-background: #ffffffcc;
+background: #ffffffdd;
 
 }
 
@@ -313,7 +328,7 @@ background: #ffffffcc;
     opacity: 1;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .project-grid {
         flex-direction: row;
         justify-content: center;
