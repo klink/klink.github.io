@@ -3,43 +3,45 @@
 /* Custom Properties */
 :root {
 
---ff-primary: 'Lato', serif;
---ff-secondary: 'Montserrat', serif;
+    --ff-primary: 'Lato', serif;
+    --ff-secondary: 'Montserrat', serif;
 
---fw-reg: 300;
---fw-bold: 900;
-   
---clr-light: #fff;
---clr-light-2: #F8F8F8;
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-light-2: #F8F8F8;
 
---clr-dark: #777777;
---clr-accent: #D0C3AE;
---clr-accent-2:#ADADAA;
-   
---fs-h1: 3rem;
---fs-h2: 2.25rem;
---fs-h3: 1.1rem;
---fs-body: 1rem;
---fs-sub: 1.5rem;
+    --clr-dark: #777777;
+    --clr-accent: #D0C3AE;
+    --clr-accent-2:#ADADAA;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.1rem;
+    --fs-body: 1rem;
+    --fs-sub: 1.5rem;
+    --fs-btn: 2rem;
 
-   
---bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-         0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+    0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
+
 /* General styles */
 
 html {
- scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--clr-light);
-  color: var(--clr-dark);
-  font-family: var(--ff-primary);
-  font-size: var(--fs-body);
-  line-height: 1.6;
-  font-weight: var(--fw-reg);
-  margin: 0; 
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    font-weight: var(--fw-reg);
+    margin: 0; 
 }
 
 img {
@@ -56,34 +58,35 @@ strong {
     font-weight: var(--fw-bold);
     display: block;
 }
+
 @media (min-width: 850px) {
     strong {
-    display: inline;
+     display: inline;
     }
 }
 
 
 h1 {
-  font-family: var(--ff-secondary);
-  font-size: var(--fs-h1);
-  font-weight: var(--fw-reg);
-  margin-bottom: 0;
-  text-align: center;
-
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-reg);
+    margin-bottom: 0;
+    text-align: center;
 }
-h2 {
-  font-family: var(--ff-secondary);
-  font-size: var(--fs-h2);
-  font-weight: var(--fw-bold);
 
+h2 {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
 }
 
 h3 {
-  font-family: var(--ff-secondary);
-  font-size: var(--fs-h3);
-  font-weight: var(--fw-bold);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
 
 }
+
 .section-subtitle-intro,
 .section-subtitle-about {
     background: var(--clr-accent-2);
@@ -110,7 +113,7 @@ h3 {
     color: var(--clr-light);
     text-decoration: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: var(--fs-body);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
@@ -129,15 +132,11 @@ h3 {
     cursor: pointer;
     margin: 0; 
     z-index: 100;
+    font-size: var(--fs-btn);
+    color: var(--clr-dark);
+}
 
-  }
-  
- 
-  
-  .carousel-button img {
-    width: 12px;
-  }
-  
+
   .carousel-nav {
     display: flex; 
     justify-content: center; 
@@ -152,16 +151,15 @@ h3 {
     background: rgba(0,0,0,.3); 
     margin: 0 12px;
     cursor: pointer;
-
   }
   
-  .carousel-indicator.current-slide {
-    background: rgba(0,0,0,.75); 
+  .carousel-indicator.current-slide { 
+      background: rgba(0,0,0,.75); 
   }
 
   @media (min-width: 600px) {
     .carousel-button {
-        margin: 2em;
+        margin: 1em;
     }
   }
 
@@ -180,20 +178,18 @@ header {
     right: 0;
     top: 0;
     left: 0;
-
 }
 
 .nav {
-
-     align-self:center;
+    align-self:center;
 }
 
 .nav-list {
     list-style:none;
     display: flex;
     justify-content: flex-end;
-      margin: 0;
-      padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-list > li{
@@ -220,13 +216,11 @@ header {
 
 /*  Intro section  */
 
-
 .intro {
-   
-text-align: center;
-display:flex; 
-flex-direction: column;
-max-width: 90%;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    max-width: 90%;
 }
 
 .main-image {
@@ -237,35 +231,34 @@ max-width: 90%;
 
 .section-subtitle-intro {
     display: inline-block;
-
 }
 
 @media (min-width: 750px) {
-.intro {
- flex-direction: row-reverse;
- justify-content: center;
- align-items: center;
-}
-h1 {
-    text-align: left;
-}
-.main-image {
-    max-width: 300px;
-    margin: 0 2em;
-}
-.section-subtitle-intro {
-    text-align: left;
-}
-.intro-text {
-    max-width: 600px;
-    text-align: left;
+    .intro {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        text-align: left;
+    }
+    .main-image {
+        max-width: 300px;
+        margin: 0 2em;
+    }
+    .section-subtitle-intro {
+        text-align: left;
+    }
+    .intro-text {
+        max-width: 600px;
+        text-align: left;
+    }
 }
 
-}
 @media (min-width: 1000px) {
     .main-image {
         max-width: 400px;
-}
+    }
 }
 /*  My prerequisites  */
 
@@ -291,7 +284,6 @@ h1 {
     .prerequisite {
         max-width: 300px;
     }
-
 }
 
 /*  Why FAC */
@@ -332,64 +324,59 @@ h1 {
     color: var(--clr-dark);
     text-align: center;    
     padding: 0; 
-
 }
+
 .section-title-projects {
     padding: 2em 2em 0 2em;
 }
 
 .project-grid {
     display: flex;
-     flex-direction: row;
-     align-items: center;
-     justify-content: center;
-     width: 100%;
-     height: 300px; 
-     margin: 0 auto; 
-     position: relative;
-
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px; 
+    margin: 0 auto; 
+    position: relative;
 }
 
 .carousel-container {
-    
     width: 100%; 
     height: 100%;
     position: relative;
     overflow: hidden;
-
 }
 
 .project {
     position: absolute;
-top:  0;
-right: 0;
-bottom: 0;
-left: 0; 
-margin: 0; 
+    top:  0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+    margin: 0; 
 }
 
 .project-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /*transition: opacity ease-out 250ms; */
 }
 
 .project-description {
-position: absolute; 
-left:0;
-right:0;
-bottom:0;
-top: 0;
-display: flex;
-flex-direction: column;
-justify-content: center;
-color: var(--clr-dark);
-opacity: 0;
-transition: opacity ease-out 250ms;
-pointer-events: none;
-background: #ffffffdd;
-
+    position: absolute; 
+    left:0;
+    right:0;
+    bottom:0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--clr-dark);
+    opacity: 0;
+    transition: opacity ease-out 250ms;
+    pointer-events: none;
+    background: #ffffffdd;
 }
 
 .project:hover .project-description {
@@ -402,16 +389,15 @@ background: #ffffffdd;
         height: 400px; 
     } 
     .carousel-container {
-    width: 80%; 
+        width: 80%; 
     }
     .work {
-    padding: 2em; 
+        padding: 4em 2em; 
     }
 
     .section-title-projects {
         padding-top: 0;
     }
-
 }
 
 /* footer */
@@ -419,9 +405,9 @@ background: #ffffffdd;
 .footer {
     text-align: center;
     padding: 2.5em 0;
-font-size: var(--fs-sub);
-background-color: var(--clr-dark);
-color: var(--clr-light);
+    font-size: var(--fs-sub);
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
 }
 
 .footer a { 

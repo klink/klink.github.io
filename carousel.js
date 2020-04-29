@@ -11,8 +11,7 @@ var busy = false;
 //create a function that updates slides and dots according to the current slide
 
 function showCurr() {
-    for (var i=0; i<slides.length; i++)
-      {
+    for (var i=0; i<slides.length; i++) {
         if (i == currIndex) {
           slides[i].style.display = 'block'; 
           dots[i].classList.add('current-slide'); 
@@ -88,7 +87,7 @@ function showCurr() {
     for (var i = 0; i<dots.length; i++) {
       const dotIndex = i;
       dots[i].addEventListener('click', function() { currIndex = dotIndex; 
-                                              showCurr();
+      showCurr();
         
       })
     }
