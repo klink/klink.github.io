@@ -28,10 +28,10 @@
   <header>
   <nav class="nav" id="navbar">
       <ul class="nav-list">
-        <li><a href="#welcome" class="nav-link"> About </a></li>
-          <li><a href="#prerequisites" class="nav-link"> Coding </a></li>
-          <li><a href="#fac" class="nav-link"> FAC 2020 </a></li>
-          <li><a href="#projects" class="nav-link"> Projects </a></li>
+        <li><a href="#welcome" class="nav-link"> about </a></li>
+          <li><a href="#prerequisites" class="nav-link"> coding </a></li>
+          <li><a href="#fac" class="nav-link"> fac 2020 </a></li>
+          <li><a href="#projects" class="nav-link"> projects </a></li>
       </ul>
   </nav>
   </header>
@@ -101,31 +101,47 @@
   <section class="work" id="projects">
     <h2> Selected Projects </h2>
     <div class="project-grid">
+        <button class="carousel-button carousel-button-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Angle_left_font_awesome.svg/512px-Angle_left_font_awesome.svg.png" alt="">
+        </button>  
+        <div class="carousel-container">
+
         <!-- Portfolio item 01 -->
-        <div class="project">
-            <a href="#"> <img class="project-image" src="./images/project1.jpg" alt="Artour"> </a>
-            <div class="project-description" >
-                <h3 class="project-title">Artour</h3>
-                <p class="project-text">Chatbot for finding art</p>
+            <div class="project">
+                <a href="#"> <img class="project-image" src="./images/project1.jpg" alt="Artour"> </a>
+                <div class="project-description" >
+                    <h3 class="project-title">Artour</h3>
+                    <p class="project-text">Chatbot for finding art</p>
+                </div>
             </div>
-        </div>
     <!-- Portfolio item 02 -->
-        <div class="project">
-            <a href="#"> <img class="project-image" src="./images/project2.jpg" alt="Lini"> </a>
-             <div class="project-description" >
-                <h3 class="project-title">Lini</h3>
-                <p class="project-text">Smart Linkedin contacts app</p>
-             </div>
-        </div>
+            <div class="project">
+                 <a href="#"> <img class="project-image" src="./images/project2.jpg" alt="Lini"> </a>
+                <div class="project-description" >
+                    <h3 class="project-title">Lini</h3>
+                    <p class="project-text">Smart Linkedin contacts app</p>
+                </div>
+            </div>
       <!-- Portfolio item 03 -->
-      <div class="project">
-        <a href="#"> <img class="project-image" src="./images/project3.jpg" alt="PH Meetup"> </a>
-         <div class="project-description" >
-            <h3 class="project-title">Product Hunt</h3>
-            <p class="project-text">Meetup in Copenhagen</p>
-         </div>
-    </div>  
+            <div class="project">
+                <a href="#"> <img class="project-image" src="./images/project3.jpg" alt="PH Meetup"> </a>
+                <div class="project-description" >
+                    <h3 class="project-title">Product Hunt</h3>
+                    <p class="project-text">Meetup in Copenhagen</p>
+                </div>
+             </div>  
+  
+        </div>
+        <button class="carousel-button carousel-button-right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Angle_right_font_awesome.svg/512px-Angle_right_font_awesome.svg.png" alt="">
+          </button>
+          
     </div>
+    <div class="carousel-nav">
+        <button class="carousel-indicator current-slide"></button>
+        <button class="carousel-indicator"></button>
+        <button class="carousel-indicator"></button>
+      </div>
     </section>
   
 
@@ -152,6 +168,6 @@
       </ul>
   </footer>
   
-  
+  <script src="carousel.js"></script>
 </body>
 </html>
