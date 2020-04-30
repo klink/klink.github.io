@@ -409,7 +409,7 @@ header {
     opacity: 1;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
     .project-grid {
         width: 80%;
         height: 400px; 
