@@ -1,4 +1,4 @@
-# [kateklink.com](kateklink.com)
+# [kateklink.com](https://kateklink.com)
 
 This repo contains the source code of my personal website.
 
@@ -6,13 +6,13 @@ It is built using mobile-first responsive layout and vanilla JS. Includes my own
 
 Other tools used:
 
-* [Font Awesome](fontawesome.com)
+* [Font Awesome](https://fontawesome.com)
 * Google Fonts
 * Google Analytics
 
 
 Special thanks to:
-* [freeCodeCamp](freecodecamp.org) for nice tutorials
-* [MDN](developer.mozilla.org) for comprehensive web tech references
-* [Founders and Coders](foundersandcoders.com) for motivation and mentorship
+* [freeCodeCamp](https://freecodecamp.org) for nice tutorials
+* [MDN](https://developer.mozilla.org) for comprehensive web tech references
+* [Founders and Coders](https://foundersandcoders.com) for motivation and mentorship
 
