@@ -22,6 +22,7 @@
     --fs-body: 1rem;
     --fs-sub: 1.5rem;
     --fs-btn: 2rem;
+    --fs-btn-small: 1rem;
 
     
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
@@ -126,7 +127,7 @@ h3 {
 }
 
 .carousel-button {
-    height: 200px;
+    height: 100%;
     background: transparent; 
     border: 0;
     cursor: pointer;
@@ -138,23 +139,48 @@ h3 {
 
 
   .carousel-nav {
-    display: flex; 
+    display: grid; 
+    
     justify-content: center; 
-    padding: 30px 0; 
+    grid-template-columns: 1fr min-content 1fr;
+    justify-items: end;
+    grid-template-areas: 
+    "play dots .";
+    margin: 1em 0; 
   }
-  
+  .carousel-indicator-container {
+    grid-area: dots;
+    display: flex; 
+  }
+
   .carousel-indicator {
     border: 0; 
-    border-radius: 50%; 
-    width: 15px;
-    height: 15px; 
-    background: rgba(0,0,0,.3); 
-    margin: 0 12px;
+    background: transparent; 
+    margin: 0;
+    padding: 0.5em 0.7em;
     cursor: pointer;
+    font-size: var(--fs-btn-small);
+    color: var(--clr-accent-2);
   }
   
   .carousel-indicator.current-slide { 
-      background: rgba(0,0,0,.75); 
+    color: var(--clr-dark);
+  }
+
+  .carousel-toggle-container{
+    grid-area: play;
+  }
+
+  .carousel-toggle {
+    border: 0; 
+    margin-right: 1em;
+    background: transparent; 
+    padding: 0.5em 0.8em;
+    width: 3em;
+    font-size: var(--fs-btn-small);
+    color: var(--clr-dark);
+    right: 100%;
+
   }
 
   @media (min-width: 600px) {
@@ -323,7 +349,7 @@ header {
     background-color: var(--clr-light-2);
     color: var(--clr-dark);
     text-align: center;    
-    padding: 0; 
+    padding: 0em 0em 2em 0em; 
 }
 
 .section-title-projects {
@@ -416,10 +442,11 @@ header {
 }
 
 .social-list {
-    list-style:none;
-    display:flex;
+    list-style: none;
+    display: flex;
     justify-content: center;
     padding: 0;
+    font-size: var(--fs-btn);
 
 }
 .social-list-item {
