@@ -4,9 +4,33 @@ console.log(slides);
 const nextButton = document.querySelector('.carousel-button-right');
 const prevButton = document.querySelector('.carousel-button-left');
 const dotsNav = document.querySelector('.carousel-nav');
-const dots = Array.from(dotsNav.children);
+const dots = Array.from(dotsNav.getElementsByClassName('carousel-indicator'));
+const playButton = document.getElementById('carousel-play'); 
+const pauseButton = document.getElementById('carousel-pause'); 
+
 var currIndex = 0; 
 var busy = false;
+var timer;
+
+//create a function that activates auto-play for image carousel
+function play() {
+  timer = setInterval(next, 3000);
+  playButton.style.display = 'none';
+  pauseButton.style.display = 'block';
+}
+
+playButton.addEventListener('click', play);
+
+//create a function that de-activates auto-play for image carousel
+
+function pause() {
+  clearInterval(timer);
+  playButton.style.display = 'block';
+  pauseButton.style.display = 'none';
+}
+
+pauseButton.addEventListener('click', pause);
+pauseButton.style.display='none';
 
 //create a function that updates slides and dots according to the current slide
 
@@ -28,7 +52,7 @@ function showCurr() {
     
     //when clicking on right button, show the next slide
     
-    nextButton.addEventListener('click', function() {
+    function next() {
       
       if(busy){
         return;
@@ -52,7 +76,9 @@ function showCurr() {
       setTimeout(showCurr,1000);
       setTimeout(function() { busy = false }, 1000);
       
-    } )
+    } 
+
+    nextButton.addEventListener('click', next)
     
     
     //when clicking on the left button, show the previous slide
